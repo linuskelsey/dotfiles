@@ -8,9 +8,11 @@ grep -E '^[a-z_0-9]+ = "#[0-9a-fA-F]+"' "$TOML" | \
 
 # Update Hyprland border color from color1
 color1=$(grep '^color1 = ' "$TOML" | sed 's/.*"#\([^"]*\)".*/\1/')
+border=$(grep '^active_border_color = ' "$TOML" | sed 's/.*"#\([^"]*\)".*/\1/')
+border=${border:-$color1}
 cat > ~/.config/hypr/theme-colors.conf <<CONF
 general {
-    col.active_border = rgba(${color1}ff)
+    col.active_border = rgba(${border}ff)
 }
 CONF
 hyprctl reload
