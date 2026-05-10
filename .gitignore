@@ -2,3 +2,4 @@ omarchy/.config/omarchy/themes/
 tmux/.config/tmux/plugins/
 omarchy/.config/omarchy/current/theme.name
 omarchy/.config/omarchy/current/
+fix_stow.sh
