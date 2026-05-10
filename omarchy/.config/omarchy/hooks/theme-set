@@ -1,0 +1,16 @@
+#!/bin/bash
+# reset theme colours for waybar config
+TOML="$HOME/.config/omarchy/current/theme/colors.toml"
+CSS="$HOME/.config/waybar/colors.css"
+grep -E '^[a-z_0-9]+ = "#[0-9a-fA-F]+"' "$TOML" | \
+  sed 's/\([a-z_0-9]*\) = "\(#[0-9a-fA-F]*\)"/@define-color \1 \2;/' \
+  > "$CSS"
+
+# Update Hyprland border color from color1
+color1=$(grep '^color1 = ' "$TOML" | sed 's/.*"#\([^"]*\)".*/\1/')
+cat > ~/.config/hypr/theme-colors.conf <<CONF
+general {
+    col.active_border = rgba(${color1}ff)
+}
+CONF
+hyprctl reload

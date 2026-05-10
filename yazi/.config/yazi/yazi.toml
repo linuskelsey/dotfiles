@@ -1,0 +1,19 @@
+# yazi.toml
+# Main config file
+
+[mgr]
+ratio = [1, 3, 4]
+sort_by = "natural"
+sort_dir_first = true
+sort_translit = true
+linemode = "size_and_mtime"
+show_hidden = true
+show_symlink = true
+scrolloff = 5
+
+[preview]
+wrap = "no"
+tab_size = 2
+
+[input]
+cursor_blink = true

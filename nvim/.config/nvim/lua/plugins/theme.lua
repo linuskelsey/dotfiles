@@ -1,0 +1,1 @@
+/home/prometheus/.config/omarchy/current/theme/neovim.lua

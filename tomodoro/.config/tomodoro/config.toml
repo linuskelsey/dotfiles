@@ -1,0 +1,60 @@
+# tomodoro configuration
+# All values shown are defaults. Uncomment and edit to customise.
+
+# Starting animation theme (0–7): waves, rain, leaves, stars, fire, aurora, blossom, sunset
+theme = 2
+
+# Per-phase themes — overrides `theme` for each phase independently
+focus_theme = 4
+break_theme = 6
+
+# Render mode: "half", "quarter", or "braille"
+# render_mode = "half"
+
+# Default durations in minutes
+focus = 50
+short_break = 10
+long_break = 30
+
+# Sessions before a long break
+# long_break_interval = 4
+
+# Starting volume (0.0–1.0)
+volume = 0.8
+
+# Skip the startup screen and begin immediately
+# auto_start = true
+
+# Countdown beep seconds at end of each break
+# countdown_beeps = 5
+
+# Desktop notifications via notify-send on phase end
+notifications = true
+
+# Check crates.io for a newer version on startup (via cargo search)
+update_check = true
+
+# Lock the progress bar to a specific style regardless of render mode: "half", "quarter", "braille"
+# bar_style = "braille"
+
+# Profile to load at startup without showing the picker (must match a [profiles.*] name below)
+default_profile = "deep"
+
+# Custom effect sounds — path to an audio file (ogg, mp3, wav, flac)
+# Files can be placed in ~/.config/tomodoro/sounds/effects/
+# bell_sound = "~/.config/tomodoro/sounds/effects/undertakers-bell.mp3"
+# beep_sound = "~/.config/tomodoro/sounds/effects/beep.mp3"
+
+# Timer profiles — named presets selectable at startup
+# Each accepts: focus, short_break, long_break (minutes); omitted values fall back to the defaults above
+[profiles.deep]
+focus = 90
+short_break = 15
+long_break = 30
+long_break_interval = 4
+
+[profiles.normal]
+focus = 50
+short_break = 10
+long_break = 30
+long_break_interval = 4
