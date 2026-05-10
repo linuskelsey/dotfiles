@@ -3,3 +3,5 @@ tmux/.config/tmux/plugins/
 omarchy/.config/omarchy/current/theme.name
 omarchy/.config/omarchy/current/
 fix_stow.sh
+waybar/.config/waybar/colors.css
+hypr/.config/hypr/theme-colors.conf
