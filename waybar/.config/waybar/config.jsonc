@@ -1,7 +1,7 @@
 [
   {
     // ╔══════════════════════════════╗
-    // ║  Monitor 1 — change HDMI-A-1    ║
+    // ║  Monitor 1 — change HDMI-A-1 ║
     // ║  to match `hyprctl monitors` ║
     // ╚══════════════════════════════╝
     "output": "HDMI-A-1",
@@ -10,9 +10,9 @@
     "position": "top",
     "spacing": 0,
     "height": 30,
-    "modules-left": ["custom/omarchy", "group/battery-vol", "group/bluetooth-network", "group/usage"],
+    "modules-left": ["group/battery-vol", "group/bluetooth-network", "group/usage"],
     "modules-right": ["custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/spotify-icon", "mpris", "clock"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/workspaces#left", "custom/omarchy", "hyprland/workspaces#right"],
 
     "group/battery-vol": {
       "orientation": "inherit",
@@ -27,29 +27,38 @@
       "modules": ["cpu", "memory"]
     },
 
-    "hyprland/workspaces": {
+    "hyprland/workspaces#left": {
       "on-click": "activate",
       "format": "{icon}",
+      "ignore-workspaces": ["6", "7", "8", "9", "10"],
       "format-icons": {
-        "default": "",
         "1": "一",
         "2": "二",
         "3": "三",
         "4": "四",
         "5": "五",
-        "6": "六",
-        "7": "七",
-        "8": "八",
-        "9": "九",
-        "10": "十",
-        "active": "里"
       },
       "persistent-workspaces": {
         "1": [],
         "2": [],
         "3": [],
         "4": [],
-        "5": [],
+        "5": []
+      }
+    },
+
+    "hyprland/workspaces#right": {
+      "on-click": "activate",
+      "format": "{icon}",
+      "ignore-workspaces": ["1", "2", "3", "4", "5"],
+      "format-icons": {
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十",
+      },
+      "persistent-workspaces": {
         "6": [],
         "7": [],
         "8": [],
@@ -231,9 +240,9 @@
     "position": "top",
     "spacing": 0,
     "height": 30,
-    "modules-left": ["custom/omarchy", "group/battery-vol", "group/bluetooth-network", "group/usage"],
+    "modules-left": ["group/battery-vol", "group/bluetooth-network", "group/usage"],
     "modules-right": ["custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/spotify-icon", "mpris", "clock"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/workspaces#left", "custom/omarchy", "hyprland/workspaces#right"],
 
     "group/battery-vol": {
       "orientation": "inherit",
@@ -248,29 +257,38 @@
       "modules": ["cpu", "memory"]
     },
 
-    "hyprland/workspaces": {
+    "hyprland/workspaces#left": {
       "on-click": "activate",
       "format": "{icon}",
+      "ignore-workspaces": ["6", "7", "8", "9", "10"],
       "format-icons": {
-        "default": "",
         "1": "一",
         "2": "二",
         "3": "三",
         "4": "四",
         "5": "五",
-        "6": "六",
-        "7": "七",
-        "8": "八",
-        "9": "九",
-        "10": "十",
-        "active": "里"
       },
       "persistent-workspaces": {
         "1": [],
         "2": [],
         "3": [],
         "4": [],
-        "5": [],
+        "5": []
+      }
+    },
+
+    "hyprland/workspaces#right": {
+      "on-click": "activate",
+      "format": "{icon}",
+      "ignore-workspaces": ["1", "2", "3", "4", "5"],
+      "format-icons": {
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十",
+      },
+      "persistent-workspaces": {
         "6": [],
         "7": [],
         "8": [],
