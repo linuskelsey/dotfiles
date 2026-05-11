@@ -1,0 +1,41 @@
+# peaclock config
+# file: config
+# date: 2026-05-11T06:19:14Z
+
+mode clock
+view digital
+toggle active-bg
+stopwatch start
+timer 10m:0s
+timer-exec ''
+date '%a %b %d'
+locale ''
+timezone ''
+fill-colon ''
+fill-active ''
+fill-inactive ''
+rate-input 50
+rate-status 5000
+rate-refresh 1000
+block 2 1
+padding 0 0
+margin 0 0
+ratio 2 1
+date-padding 1
+set date on
+set seconds off
+set hour-24 on
+set auto-size on
+set auto-ratio on
+style active-fg clear
+style active-bg #9f5f72
+style inactive-fg clear
+style inactive-bg clear
+style colon-fg clear
+style colon-bg clear
+style date clear
+style text clear
+style background clear
+style prompt clear
+style success green
+style error red
