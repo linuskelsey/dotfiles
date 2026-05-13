@@ -11,6 +11,17 @@ break_theme = 6
 # Render mode: "half", "quarter", or "braille"
 # render_mode = "half"
 
+# Phase colours — hex (#rrggbb or #rgb), rgb(r,g,b), or a named colour (red, green, cyan, etc.)
+# focus_color = "#e67e80"
+# short_break_color = "#a7c080"
+# long_break_color = "#7fbbb3"
+ 
+# Import colours from a theme file (.toml or waybar .css)
+color_scheme = "~/.config/omarchy/current/theme/colors.toml"
+focus_color_key = "color1"
+short_break_color_key = "color2"
+long_break_color_key = "color4"
+
 # Default durations in minutes
 focus = 50
 short_break = 10
@@ -23,7 +34,10 @@ long_break = 30
 volume = 0.8
 
 # Skip the startup screen and begin immediately
-# auto_start = true
+auto_start = true
+
+# When switching profiles during a break, defer the change until the break ends
+defer_profile_switch = true
 
 # Countdown beep seconds at end of each break
 # countdown_beeps = 5
@@ -35,18 +49,19 @@ notifications = true
 update_check = true
 
 # Lock the progress bar to a specific style regardless of render mode: "half", "quarter", "braille"
-# bar_style = "braille"
+# bar_style = "half"
 
 # Profile to load at startup without showing the picker (must match a [profiles.*] name below)
 default_profile = "deep"
 
 # Custom effect sounds — path to an audio file (ogg, mp3, wav, flac)
 # Files can be placed in ~/.config/tomodoro/sounds/effects/
-# bell_sound = "~/.config/tomodoro/sounds/effects/undertakers-bell.mp3"
+# bell_sound = "~/.config/tomodoro/sounds/effects/bell.mp3"
 # beep_sound = "~/.config/tomodoro/sounds/effects/beep.mp3"
 
 # Timer profiles — named presets selectable at startup
-# Each accepts: focus, short_break, long_break (minutes); omitted values fall back to the defaults above
+# Each accepts: focus, short_break, long_break, long_break_interval (minutes/count); omitted values fall back to the defaults above
+
 [profiles.deep]
 focus = 90
 short_break = 15
