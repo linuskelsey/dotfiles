@@ -15,12 +15,12 @@ break_theme = 6
 # focus_color = "#e67e80"
 # short_break_color = "#a7c080"
 # long_break_color = "#7fbbb3"
- 
+
 # Import colours from a theme file (.toml or waybar .css)
 color_scheme = "~/.config/omarchy/current/theme/colors.toml"
-focus_color_key = "color1"
-short_break_color_key = "color2"
-long_break_color_key = "color4"
+focus_color_key = "active_border_color"
+short_break_color_key = "color4"
+long_break_color_key = "color3"
 
 # Default durations in minutes
 focus = 50
@@ -37,7 +37,7 @@ volume = 0.8
 auto_start = true
 
 # When switching profiles during a break, defer the change until the break ends
-defer_profile_switch = true
+# defer_profile_switch = true
 
 # Countdown beep seconds at end of each break
 # countdown_beeps = 5
