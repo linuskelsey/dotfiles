@@ -12,9 +12,9 @@ break_theme = 6
 # render_mode = "half"
 
 # Phase colours — hex (#rrggbb or #rgb), rgb(r,g,b), or a named colour (red, green, cyan, etc.)
-# focus_color = "#e67e80"
-# short_break_color = "#a7c080"
-# long_break_color = "#7fbbb3"
+focus_color = "#d3c6aa"
+short_break_color = "#7fbbb3"
+long_break_color = "#dbbc7f"
 
 # Import colours from a theme file (.toml or waybar .css)
 color_scheme = "~/.config/omarchy/current/theme/colors.toml"
@@ -34,10 +34,13 @@ long_break = 30
 volume = 0.8
 
 # Skip the startup screen and begin immediately
-# auto_start = true
+auto_start = true
 
 # When switching profiles during a break, defer the change until the break ends
 # defer_profile_switch = true
+
+# Daily focus goal in minutes — progress shown in header (0 = disabled)
+# daily_goal_mins = 0
 
 # Countdown beep seconds at end of each break
 # countdown_beeps = 5
