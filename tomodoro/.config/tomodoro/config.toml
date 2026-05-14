@@ -34,7 +34,7 @@ long_break = 30
 volume = 0.8
 
 # Skip the startup screen and begin immediately
-auto_start = true
+# auto_start = true
 
 # When switching profiles during a break, defer the change until the break ends
 # defer_profile_switch = true
