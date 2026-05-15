@@ -67,9 +67,9 @@ volume = 0.8
 # ── Integrations ─────────────────────────────────────────────────────────────
 
 # Path to write status JSON; enables status bar integration and --pause/--skip IPC
-# bar_path = "/tmp/tomodoro.json"
+bar_path = "/tmp/tomodoro.json"
 # Send SIGRTMIN+N to the status bar process after each write for instant updates
-# bar_signal = 5
+bar_signal = 5
 
 # Desktop notifications via notify-send on phase end
 notifications = true
