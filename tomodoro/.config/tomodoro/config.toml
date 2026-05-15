@@ -1,7 +1,31 @@
 # tomodoro configuration
 # All values shown are defaults. Uncomment and edit to customise.
+#
+# To add a new key: update AppConfig (field), Default::default (value),
+# DEFAULT_CONFIG (template line), and build_config_content (serialiser).
 
-# Starting animation theme (0–7): waves, rain, leaves, stars, fire, aurora, blossom, sunset
+# ── Timer ────────────────────────────────────────────────────────────────────
+
+# Duration of each phase in minutes
+focus = 50
+short_break = 10
+long_break = 30
+
+# Focus sessions before a long break
+# long_break_interval = 4
+
+# Skip the startup screen and begin immediately
+auto_start = true
+
+# When switching profiles during a break, defer the change until the break ends
+# defer_profile_switch = true
+
+# Daily focus goal in minutes — progress shown in header (0 = disabled)
+# daily_goal_mins = 0
+
+# ── Display ──────────────────────────────────────────────────────────────────
+
+# Animation theme (0–7): waves, rain, leaves, stars, fire, aurora, blossom, sunset
 theme = 2
 
 # Per-phase themes — overrides `theme` for each phase independently
@@ -10,6 +34,11 @@ break_theme = 6
 
 # Render mode: "half", "quarter", or "braille"
 # render_mode = "half"
+
+# Lock the progress bar to a specific style regardless of render mode: "half", "quarter", "braille"
+# bar_style = "half"
+
+# ── Colours ──────────────────────────────────────────────────────────────────
 
 # Phase colours — hex (#rrggbb or #rgb), rgb(r,g,b), or a named colour (red, green, cyan, etc.)
 focus_color = "#d3c6aa"
@@ -22,28 +51,25 @@ focus_color_key = "active_border_color"
 short_break_color_key = "color4"
 long_break_color_key = "color3"
 
-# Default durations in minutes
-focus = 50
-short_break = 10
-long_break = 30
-
-# Sessions before a long break
-# long_break_interval = 4
+# ── Audio ─────────────────────────────────────────────────────────────────────
 
 # Starting volume (0.0–1.0)
 volume = 0.8
 
-# Skip the startup screen and begin immediately
-auto_start = true
-
-# When switching profiles during a break, defer the change until the break ends
-# defer_profile_switch = true
-
-# Daily focus goal in minutes — progress shown in header (0 = disabled)
-# daily_goal_mins = 0
-
 # Countdown beep seconds at end of each break
 # countdown_beeps = 5
+
+# Custom effect sounds — path to an audio file (ogg, mp3, wav, flac)
+# Files can be placed in ~/.config/tomodoro/sounds/effects/
+# bell_sound = "~/.config/tomodoro/sounds/effects/bell.mp3"
+# beep_sound = "~/.config/tomodoro/sounds/effects/beep.mp3"
+
+# ── Integrations ─────────────────────────────────────────────────────────────
+
+# Path to write status JSON; enables status bar integration and --pause/--skip IPC
+# bar_path = "/tmp/tomodoro.json"
+# Send SIGRTMIN+N to the status bar process after each write for instant updates
+# bar_signal = 5
 
 # Desktop notifications via notify-send on phase end
 notifications = true
@@ -51,16 +77,10 @@ notifications = true
 # Check crates.io for a newer version on startup (via cargo search)
 update_check = true
 
-# Lock the progress bar to a specific style regardless of render mode: "half", "quarter", "braille"
-# bar_style = "half"
+# ── Profiles ─────────────────────────────────────────────────────────────────
 
 # Profile to load at startup without showing the picker (must match a [profiles.*] name below)
 default_profile = "deep"
-
-# Custom effect sounds — path to an audio file (ogg, mp3, wav, flac)
-# Files can be placed in ~/.config/tomodoro/sounds/effects/
-# bell_sound = "~/.config/tomodoro/sounds/effects/bell.mp3"
-# beep_sound = "~/.config/tomodoro/sounds/effects/beep.mp3"
 
 # Timer profiles — named presets selectable at startup
 # Each accepts: focus, short_break, long_break, long_break_interval (minutes/count); omitted values fall back to the defaults above

@@ -11,7 +11,7 @@
     "spacing": 0,
     "height": 30,
     "modules-left": ["group/battery-vol", "group/bluetooth-network", "group/usage"],
-    "modules-right": ["custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/spotify-icon", "mpris", "clock"],
+    "modules-right": ["custom/tomodoro", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/spotify-icon", "mpris", "clock"],
     "modules-center": ["hyprland/workspaces#left", "custom/omarchy", "hyprland/workspaces#right"],
 
     "group/battery-vol": {
@@ -234,6 +234,14 @@
     "tray": {
       "icon-size": 12,
       "spacing": 17
+    },
+    "custom/tomodoro": {
+      "exec": "cat /tmp/tomodoro.json",
+      "return-type": "json",
+      "interval": 0,
+      "signal": 5,
+      "on-click": "tomodoro --pause",
+      "on-click-right": "tomodoro --skip"
     }
   },
 
@@ -249,7 +257,7 @@
     "spacing": 0,
     "height": 30,
     "modules-left": ["group/battery-vol", "group/bluetooth-network", "group/usage"],
-    "modules-right": ["custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/spotify-icon", "mpris", "clock"],
+    "modules-right": ["custom/tomodoro", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/spotify-icon", "mpris", "clock"],
     "modules-center": ["hyprland/workspaces#left", "custom/omarchy", "hyprland/workspaces#right"],
 
     "group/battery-vol": {
@@ -471,6 +479,14 @@
     "tray": {
       "icon-size": 12,
       "spacing": 17
+    },
+    "custom/tomodoro": {
+      "exec": "cat /tmp/tomodoro.json",
+      "return-type": "json",
+      "interval": 0,
+      "signal": 5,
+      "on-click": "tomodoro --pause",
+      "on-click-right": "tomodoro --skip"
     }
   }
 ]

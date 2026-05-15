@@ -205,3 +205,13 @@ tooltip {
   margin: 0;
   padding: 0;
 }
+
+#custom-tomodoro {
+  color: @color1;
+  margin-right: 4px;
+  padding: 0 5px;
+}
+
+#custom-tomodoro.paused {
+  color: alpha(@color1, 0.5);
+}
