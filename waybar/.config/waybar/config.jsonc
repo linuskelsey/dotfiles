@@ -162,14 +162,6 @@
         "default": [" ", " ", " "]
       }
     },
-    "custom/cava": {
-      "exec": "~/.config/waybar/scripts/cava.sh",
-      "restart-interval": 10,
-      "format": "{}",
-      "on-click-middle": "playerctl play-pause",
-      "on-click-right": "playerctl next",
-      "on-click-left": "playerctl previous"
-    },
     "mpris": {
       "player": "spotify",
       "format": "⏸  {artist} - {title}",
@@ -236,10 +228,9 @@
       "spacing": 17
     },
     "custom/tomodoro": {
-      "exec": "cat /tmp/tomodoro.json",
+      "exec": "cat /tmp/tomodoro.json 2>/dev/null",
       "return-type": "json",
-      "interval": 0,
-      "signal": 5,
+      "interval": 1,
       "on-click": "tomodoro --pause",
       "on-click-right": "tomodoro --skip"
     }
@@ -408,13 +399,6 @@
         "default": [" ", " ", " "]
       }
     },
-    "custom/cava": {
-      "exec": "~/.config/waybar/scripts/cava.sh",
-      "format": "{}",
-      "on-click-middle": "playerctl play-pause",
-      "on-click-right": "playerctl next",
-      "on-click-left": "playerctl previous"
-    },
     "mpris": {
       "player": "spotify",
       "format": "⏸  {artist} - {title}",
@@ -481,10 +465,9 @@
       "spacing": 17
     },
     "custom/tomodoro": {
-      "exec": "cat /tmp/tomodoro.json",
+      "exec": "cat /tmp/tomodoro.json 2>/dev/null",
       "return-type": "json",
-      "interval": 0,
-      "signal": 5,
+      "interval": 1,
       "on-click": "tomodoro --pause",
       "on-click-right": "tomodoro --skip"
     }
