@@ -17,6 +17,13 @@ return {
             },
           },
         },
+        cssls = {
+          settings = {
+            css = {
+              validate = false,
+            },
+          },
+        },
       },
     },
   },
