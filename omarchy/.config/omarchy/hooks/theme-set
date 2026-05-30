@@ -16,3 +16,11 @@ general {
 }
 CONF
 hyprctl reload
+
+# Update mako border color to match active border
+mako_border=$(grep '^active_border_color = ' "$TOML" | sed 's/.*"#\([^"]*\)".*/\1/')
+if [[ -z "$mako_border" ]]; then
+    mako_border=$(grep '^accent = ' "$TOML" | sed 's/.*"#\([^"]*\)".*/\1/')
+fi
+echo "border-color=#${mako_border}" > ~/.config/omarchy/current/theme/mako-border.ini
+makoctl reload

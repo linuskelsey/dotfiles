@@ -1,0 +1,4 @@
+include=~/.config/omarchy/current/theme/mako.ini
+include=~/.config/omarchy/current/theme/mako-border.ini
+
+border-radius=10
